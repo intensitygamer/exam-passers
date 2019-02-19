@@ -1,0 +1,31 @@
+
+function ndld() {
+	var isCtrl = false;
+	var isMacCmd = false;
+	var isMacOpt = false;
+	document.onkeyup = function(e) {
+		if (e.keyCode == 17) isCtrl = false;
+		if (e.keyCode == 55) isMacCmd = false;
+		if (e.keyCode == 58) isMacOpt = false;
+	}
+	document.onkeydown = function(e) {
+		if (e.keyCode == 17) isCtrl = true;
+		if (e.keyCode == 55) isMacCmd = true;
+		if (e.keyCode == 58) isMacOpt = true;
+		if ((e.keyCode == 83 && isCtrl == true) || (e.keyCode == 85 && isCtrl == true)) {
+		//run code for CTRL+S -- ie, save!
+			e.preventDefault();
+			return false;
+		}
+		if ((e.keyCode == 1 && isMacCmd == true) || (e.keyCode == 32 && isMacCmd == true)) {
+			e.preventDefault();
+			return false;
+		}
+		if ((e.keyCode == 1 && isMacOpt == true) || (e.keyCode == 32 && isMacOpt == true)) {
+			e.preventDefault();
+			return false;
+		}
+	}
+
+}
+

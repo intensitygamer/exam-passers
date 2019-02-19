@@ -1,0 +1,86 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	top: 0px;
+	overflow-y: auto;
+	overflow-x: auto; 
+}
+div {
+ 
+}
+form {
+	display: inline;
+}
+.container {
+	position: relative; width: 100%; height: auto; background: #ffffff; clear: both;
+}
+.container_title {
+	z-index: 5;
+	width: 1043px;
+	height: auto;
+	max-height: 133px;
+	min-height: 97px;
+	margin: 0px auto;
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	clear: both;
+}
+.nce_header {
+	float: left;
+	text-align: left;
+	font-size: 22px;
+	font-weight: bold;
+	color: #1a037e;
+	padding: 20px 7px 16px;
+	clear: both;
+}
+.container_label {
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	border-bottom: 2px solid #1a037e;
+	clear: both;
+}
+.border_label {
+	float: left;
+	text-align: center;
+	margin: 7px auto;
+}
+.container_input {
+	float: left;
+	width: 100%;
+	padding: 0px 5px;
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	clear: both;
+}
+.border_input {
+	float: left;
+	width: 38px;
+	padding: 10px 0px 5px;
+}
+.btnAlpha {
+	width: 30px;
+	margin: 0px auto;
+	text-align: center;
+}
+.container_list {
+	z-index: 1;
+	width: 1043px;
+	height: 60%;
+	margin: 0px auto; /*172px auto 0px;*/
+	font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	overflow-y: auto;
+	clear: both;
+}
+.border_list {
+	float: left;
+	text-align: center;
+	margin: 5px auto;
+	padding: 0px 4px;
+}
+@media print {
+	body {   }
+}
