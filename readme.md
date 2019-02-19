@@ -18,10 +18,10 @@ is located at /scraper-native/scraper.php
 The data retrieved from the scraper above has already been exported and is located at /sql/scraper_exam.sql
 
 
-## Configurations
+## Loading Composers
 
 composer dump-autoload
-
+composer update --no-scripts
 
 ## 
  

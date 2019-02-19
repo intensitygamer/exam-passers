@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Passers;
+use Response;
 
 class ExamPassers extends Controller
 { 
@@ -60,7 +61,7 @@ class ExamPassers extends Controller
     }
 
     public function lists_vue(){
-        
+
         return view('list_vue');
 
     }
@@ -69,6 +70,6 @@ class ExamPassers extends Controller
 
         $exam_passers = Passers::all()->sortBy("examinee");
 
-        return response($crud->jsonSerialize(), Response::HTTP_CREATED);
+        return response($exam_passers->jsonSerialize());
     }        
 }

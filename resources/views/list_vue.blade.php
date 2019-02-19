@@ -20,7 +20,7 @@
 
       <tbody>
 
-        <tr v-for="passer in passers">
+        <tr v-for="passer in exam_passers">
 
           <td>@{{ passer.id }}</td>
           <td>@{{ passer.examinee }}</td>
@@ -36,28 +36,27 @@
 
   </div>
 
-  <script>
+  <script> 
 
     const app = new Vue({
 
-      el:'#app',
+      el: '#app',
 
-      data:{
-        passers:[]
-      },
+      data: {
 
-      created: function() {
+        exam_passers:[]
 
-        Vue.axios.get('/get_passers')
+      }, 
 
-        .then(res => res.json())
+      mounted() {
 
-        .then(res => {
+          axios.get('get_passers').then(response => {
+            this.exam_passers = response
+          })
 
-          this.passers = res;
-        })
-      }
-    })
+        }
+
+      }); 
 
   </script>
 
