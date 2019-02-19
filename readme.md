@@ -23,5 +23,13 @@ The data retrieved from the scraper above has already been exported and is locat
 composer dump-autoload
 composer update --no-scripts
 
-## 
+##Env Files
+
+
+ 
+##List of Examinees
+
+There are two list of examinees function, one is in vue js and the other is in pure laravel with data table js
+
+
  

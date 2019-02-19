@@ -60,7 +60,7 @@ class ExamPassers extends Controller
 
     }
 
-    public function lists_vue(){
+    public function list_vue(){
 
         return view('list_vue');
 

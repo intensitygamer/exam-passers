@@ -4,7 +4,7 @@
    
 @section('content')
 
-  <div id="app">
+<div id="list_passers">
 
     <table>
 
@@ -19,6 +19,16 @@
         </thead>
 
       <tbody>
+            
+    <paginate
+      :page-count="10"
+      :container-class="pagination"
+      :prev-text="prev"
+      :next-text="next"
+      :click-handler="clickCallback">
+     
+      <span slot="prevContent">Changed previous button</span>
+      <span slot="nextContent">Changed next button</span>
 
         <tr v-for="passer in exam_passers">
 
@@ -34,30 +44,15 @@
 
     </table>
 
-  </div>
+</div>
 
-  <script> 
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-    const app = new Vue({
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
 
-      el: '#app',
+<script src="https://unpkg.com/vuejs-paginate@0.9.0"></script>
 
-      data: {
+<script src="{{ URL::asset('js/app.js') }}" ></script>
 
-        exam_passers:[]
-
-      }, 
-
-      mounted() {
-
-          axios.get('get_passers').then(response => {
-            this.exam_passers = response
-          })
-
-        }
-
-      }); 
-
-  </script>
 
 @endsection

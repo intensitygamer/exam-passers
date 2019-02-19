@@ -4,20 +4,36 @@
    
 @section('content')
  
-  
-    <div class="row">
 
-          <form action = "{{ url('search_passers') }}" method="POST">
-            
-            {{ csrf_field() }}
+<link rel="stylesheet" href="{{ URL::asset('css/jquery.dataTables.min.css') }}" crossorigin="anonymous">
 
-            <input type="text" name="search_field"> 
+        
+<script src="{{ URL::asset('js/jquery.dataTables.min.js') }}" ></script>
 
-           <button type="submit" name="" class="btn btn-primary"> Search <i class="fa fa-search"></i> </button>
-         
-         </form>
+<script type="text/javascript">
+    
+    $("document").ready(function(){
+    
+      $("#exam_passers_table").dataTable();
+    
+    });
 
-    </div>
+
+</script>
+
+<div class="row">
+
+  <form action = "{{ url('search_passers') }}" method="POST">
+              
+  {{ csrf_field() }}
+
+  <input type="text" name="search_field"> 
+
+  <button type="submit" name="" class="btn btn-primary"> Search <i class="fa fa-search"></i> </button>
+           
+  </form>
+
+</div>
 
       @if(isset($search_field))
       

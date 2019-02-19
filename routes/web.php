@@ -17,4 +17,4 @@ Route::post('add_passers', 			'ExamPassers@store');
 Route::post('search_passers', 		'ExamPassers@search_passers');
 Route::get('school_by_passers', 	'ExamPassers@school_by_passers');
 Route::get('get_passers', 			'ExamPassers@get_passers');
-Route::get('lists_vue', 			'ExamPassers@lists_vue');
+Route::get('list_vue', 				'ExamPassers@list_vue');
