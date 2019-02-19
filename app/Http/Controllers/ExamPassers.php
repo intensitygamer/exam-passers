@@ -59,4 +59,16 @@ class ExamPassers extends Controller
 
     }
 
+    public function lists_vue(){
+        
+        return view('list_vue');
+
+    }
+
+    public function get_passers(){
+
+        $exam_passers = Passers::all()->sortBy("examinee");
+
+        return response($crud->jsonSerialize(), Response::HTTP_CREATED);
+    }        
 }

@@ -22,6 +22,12 @@
 
         <script src="{{ URL::asset('js/jquery.dataTables.min.js') }}" ></script>
 
+        <script src="{{ URL::asset('js/vue.js') }}" ></script>
+   
+        <script src="{{ URL::asset('js/vue-axios.min.js') }}" ></script>
+
+        <script src="{{ URL::asset('js/index.js') }}" ></script>
+
         <script type="text/javascript">
             
             $(document).ready( function () {
